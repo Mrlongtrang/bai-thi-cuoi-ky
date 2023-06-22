@@ -22,6 +22,10 @@ body {
 
 }
 
+.row {
+  margin: 100px;
+}
+
 .dropbtn {
   background-color: #04AA6D;
   color: white;
