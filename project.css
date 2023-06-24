@@ -2,6 +2,16 @@ body {
   overflow: scroll;
 }
 
+a.product-link:link {color:grey;}
+a.product-link:hover {color:#3e8e41;}
+
+
+.payment-footer{
+    display:flex;
+    align-items: center;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
 .banner{
  
 }
