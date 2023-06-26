@@ -2,9 +2,12 @@ body {
   overflow: scroll;
 }
 
-a.product-link:link {color:grey;}
+a.product-link {color:grey;}
 a.product-link:hover {color:#3e8e41;}
 
+ul.no-bullets{
+  list-style-type: none;
+}
 
 .payment-footer{
     display:flex;
@@ -93,3 +96,4 @@ a.product-link:hover {color:#3e8e41;}
 .dropdown-content a:hover {background-color: #f1f1f1}
 
 .show {display:block;}
+

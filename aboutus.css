@@ -23,3 +23,10 @@
     margin-left: 10px;
     padding-left: 10px;
 }
+
+ul.no-bullets{
+    list-style-type: none;
+}
+
+a.link {color:grey;}
+a.link:hover {color:#3e8e41;}
