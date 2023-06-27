@@ -32,3 +32,15 @@ function myFunction() {
     {Name:"san Pham 11", price:"100,000"},
     {Name:"san Pham 12", price:"88,888"},
   ]
+  
+  let min_price = 49000;
+  let max_price = 190000;
+  $(document).ready(function() {
+    showAllItems ();
+  });
+
+  $('min-price').on("change mousemove", function() {
+    min_price = parseInt($('#min-price').val());
+    $('#min-price-txt').text('$' + min_price);
+    showItemsFiltered();
+  })
