@@ -4,12 +4,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
 }
-.payment-footer{
-    display:flex;
-    align-items: center;
-    margin-left: 20px;
-    padding-bottom: 20px;
-}
 body {
     width: 100%;
     height: 100vh;
@@ -18,4 +12,45 @@ body {
     width:100px;
     height:100px;
     margin-left: 10px;
+}
+.top-footer {
+    display:flex;
+    justify-content: space-around;
+}
+.infor-footer {
+    display:flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.title-expand {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.footer-content {
+    margin-left: 10px;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+.title_newsletter {
+    display:flex;
+    flex-direction: column;
+}
+.nav-footer {
+    display:flex;
+    justify-content: space-around;
+    margin-left: 40px;
+}
+.payment-footer{
+    display:flex;
+    align-items: center;
+    margin-left: 20px;
+    padding-bottom: 20px;
+}
+.img-pay-footer {
+    margin-left: 10px;
+}
+.icon {
+    width: 20px;
+    height: 20px;
 }
