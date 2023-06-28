@@ -17,30 +17,53 @@ function myFunction() {
       }
     }
   }
-
-  const product =[
-    {Name:"San Pham 1", Price:"145,000",},
-    {Name:"san Pham 2", price:"99,000"},
-    {Name:"san Pham 3", price:"50,000"},
-    {Name:"san Pham 4", price:"120,000"},
-    {Name:"san Pham 5", price:"125,000"},
-    {Name:"san Pham 6", price:"69,000"},
-    {Name:"san Pham 7", price:"150,000"},
-    {Name:"san Pham 8", price:"67,000"},
-    {Name:"san Pham 9", price:"55,000"},
-    {Name:"san Pham 10", price:"78,000"},
-    {Name:"san Pham 11", price:"100,000"},
-    {Name:"san Pham 12", price:"88,888"},
-  ]
-  
+   
   let min_price = 49000;
   let max_price = 190000;
   $(document).ready(function() {
     showAllItems ();
   });
 
-  $('min-price').on("change mousemove", function() {
+  $('#min-price').on("change mousemove", function() {
     min_price = parseInt($('#min-price').val());
-    $('#min-price-txt').text('$' + min_price);
+    $('#min-price-txt').text(min_price + "VNĐ");
     showItemsFiltered();
-  })
+  });
+
+  $("#max-price").on("change mousemove", function() {
+    max_price = parseInt($('#max-price').val());
+    $('#max-price-txt').text(max_price + "VNĐ");
+    showItemsFiltered();
+  });
+
+  let category_items = [
+    {thumbnail: "https://media.discordapp.net/attachments/998765310687588423/1121306713384042597/image.png"}
+  ]
+
+  const productPrice = document.getElementsByClassName("product-price");
+  const priceElements = box-product-price.getElementsByClassName("product-price");
+  const price = [];
+
+  for (let i =0;i<priceElements.length;i++) {
+    const price = parseFloat(priceElements[i].textContent);
+    price.push(price);
+  }
+  const filterPrice = price
+  
+
+  function showAllItems() {
+    $("#display-items-div").empty();
+    for (let i = 49000; i <category_items.length; i++) {
+      let items_content = '<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 product-card" data-availiable-sizes="' +category_items[i] ['sizes'] + '"><b>' + category_items[i] ['title'] + '</b><br><img src"' + category_items[i] ['thumbnail'] + '" height="64" width="64" alt="san pham salad"><p>$' + category_items[i]['price'] + '</p></div>';
+    }
+  }
+
+  function showItemsFiltered() {
+    $("#display-items-div").empty();
+    for (let i = 0; i < category_items.length; i++) {
+      if (category_items[i]['price'] <= max_price && category_items[i]['Price']>= min_price) {
+        let item_content = '<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 product-card" data-availiable-sizes="' +category_items[i] ['sizes'] + '"><b>' + category_items[i]['title'] + '</b><br><img src"' +category_items[i] ['thumbnail'] + '" height="64" width="64" alt="san pham salad"><p>$' +category_items[i][price] + '</p></div>';
+        $("#display-items-div").append(item_content);
+      }
+    }
+  }
