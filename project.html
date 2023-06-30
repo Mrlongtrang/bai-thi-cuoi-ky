@@ -76,27 +76,23 @@
 
             <div class="container text-center">
                 <div class="row ">
-                  <div class="col-2">
-                    <div class="card px-2">
-                      <h2 class="text-center">Lọc Giá</h2>
-                      <hr>
-                      <h4>Giá:</h4>
-                      <div class="card-body">
-                        <form id="price-range-form">
-                          <label for="min-price" class="form-label">Thấp Nhất:</label>
-                          <span id="min-price-txt">49000VNĐ</span>
-                          <input type="range" class="priceSlider" min="49000" max="190000" step="1" value="0">
-                          <label for="max-price" class="form-label">Cao Nhất: </label>
-                          <span id="max-price-txt">190000VNĐ</span>
-                        
-                        </form>
-                      </div>
+                  <div class="col">
+                    <div>
+                     <input type="checkbox" name="high" value="high" id="high"><label
+                     for="high">Below190,000đ</label>
                     </div>
-                  </div>
+                    <div>
+                     <input type="checkbox" name="mid" value="mid" id="mid"><label
+                      for="mid">99,000đ-150,000đ</label>
+                     </div>
+                     <input type="checkbox" name="low" value="low" id="low"><label
+                      for="low">49,000đ-99,000đ</label>
+                     </div>
                   
                   <div class="col-6" style="height:100px;">
                     <h2>ALL PRODUCT</h2>
                   </div>
+
                   <div class="col">
                     <div class="dropdown" style="height:100px">
                         <button onclick="myFunction()" class="dropbtn">Sorting...</button>
@@ -113,9 +109,9 @@
                       </div>
                   </div>       
                 </div>
-            </div>
 
-           <div class="product">
+           <div id="product_list">
+            <div class="product">
             <div class="container text-center_2">
                 <div class="row" id="display-items-div">
                   <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
@@ -184,6 +180,7 @@
                      </div>
                   </div>
                 </div>
+           <div id="product_list"> </div>
 
                 <div class="row" id="display-items-div">
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
@@ -322,6 +319,10 @@
                 </div>
             </div>
           </div>    
+             </div>
+
+             <script src="
+             https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>        
         <script type="text/javascript" src="project.js"></script>
 
         <footer>
