@@ -12,12 +12,10 @@ body {
     width: 100%;
     height: 100px;
 }
-.navbar >.bg-body-tertiary {
-    background-color: rgb(175, 240, 181);
-}
-.container-fluid {
-    background-color: rgb(166, 244, 154);
-}
+
+
+
+
 .navbar-brand >.logo {
     width:100px;
     height:100px;
